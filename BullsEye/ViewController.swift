@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var roundLabel: UILabel!
     
+    let maxRounds = 20
+    
     var currentValue = 0
     var targetValue = 0
     var score = 0
@@ -39,12 +41,19 @@ class ViewController: UIViewController {
         let trackRightResizable = trackRightImage?.resizableImage(withCapInsets: insets)
         slider.setMaximumTrackImage(trackRightResizable, for: .normal)
         
-        startNewRound()
+        startNewGame()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func startNewGame() {
+        score = 0
+        round = 0
+        
+        startNewRound()
     }
     
     func startNewRound() {
@@ -53,13 +62,32 @@ class ViewController: UIViewController {
         slider.value = Float(currentValue)
         round += 1
         
-        updateLabels()
+        if round == maxRounds {
+            updateLabels()
+            
+            let message = "Your total score is \(score)!"
+            
+            let alert = UIAlertController(title: "Bull's Eye",
+                                          message: message,
+                                          preferredStyle: .alert)
+            
+            let action = UIAlertAction(title: "New Game",
+                                       style: .default,
+                                       handler: { action in
+                                                    self.startNewGame()
+                                                })
+            
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+        } else {
+            updateLabels()
+        }
     }
     
     func updateLabels() {
         targetLabel.text = String(targetValue)
         scoreLabel.text = String(score)
-        roundLabel.text = String(round)
+        roundLabel.text = "\(String(round)) of \(maxRounds)"
     }
 
     @IBAction func showAlert() {
@@ -89,10 +117,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func resetGame() {
-        score = 0
-        round = 0
-        
-        startNewRound()
+        startNewGame()
         
         let transition = CATransition()
         transition.type = kCATransitionFade
