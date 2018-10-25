@@ -65,10 +65,8 @@ class ViewController: UIViewController {
         if round == maxRounds {
             updateLabels()
             
-            let message = "Your total score is \(score)!"
-            
             let alert = UIAlertController(title: "Bull's Eye",
-                                          message: message,
+                                          message: "Your total score is \(score)!",
                                           preferredStyle: .alert)
             
             let action = UIAlertAction(title: "New Game",
@@ -91,15 +89,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showAlert() {
-        let difference: Int = abs(currentValue - targetValue)
+        let difference = abs(currentValue - targetValue)
         let points = 100 - difference
         
         score += points
         
-        let message = "You scored \(points) points!"
-        
         let alert = UIAlertController(title: "Bull's Eye",
-                                      message: message,
+                                      message: "You scored \(points) points!",
                                       preferredStyle: .alert)
         
         let action = UIAlertAction(title: "Awesome",
