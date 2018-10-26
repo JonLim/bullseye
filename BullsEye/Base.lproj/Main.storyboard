@@ -116,7 +116,7 @@
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="999999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7a5-9C-Nyk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7a5-9C-Nyk">
                                 <rect key="frame" x="314" y="288" width="58" height="20"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -144,17 +144,17 @@
                             <constraint firstItem="llk-vb-Ydm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dPX-y1-9He"/>
                             <constraint firstItem="3k2-cu-ApC" firstAttribute="baseline" secondItem="dg6-Jt-zTP" secondAttribute="baseline" id="dS9-Id-G9z"/>
                             <constraint firstItem="CS1-AJ-gNe" firstAttribute="baseline" secondItem="3k2-cu-ApC" secondAttribute="baseline" id="eiB-jr-ky4"/>
-                            <constraint firstItem="7a5-9C-Nyk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="269" id="fJW-04-c2M"/>
                             <constraint firstItem="sny-v6-1dT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="151" id="g09-lH-P0l"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TQW-Er-PgI" secondAttribute="trailing" constant="320" id="gFc-eb-n8f"/>
-                            <constraint firstItem="7a5-9C-Nyk" firstAttribute="top" secondItem="TQW-Er-PgI" secondAttribute="bottom" constant="79" id="i24-aR-eIi"/>
                             <constraint firstItem="sny-v6-1dT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="jse-On-aJu"/>
+                            <constraint firstItem="7a5-9C-Nyk" firstAttribute="baseline" secondItem="CS1-AJ-gNe" secondAttribute="baseline" id="lH6-69-5Ez"/>
                             <constraint firstItem="dg6-Jt-zTP" firstAttribute="leading" secondItem="3k2-cu-ApC" secondAttribute="trailing" constant="6" id="nQv-fd-CG0"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Kc6-P3-aBQ" secondAttribute="bottom" constant="-60" id="nkT-EF-cOj"/>
                             <constraint firstItem="hnT-IH-glk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="282" id="riZ-oq-0ME"/>
                             <constraint firstItem="aju-Tv-R2X" firstAttribute="leading" secondItem="llk-vb-Ydm" secondAttribute="trailing" constant="8" symbolic="YES" id="sYu-oy-7RP"/>
                             <constraint firstItem="5wT-4d-oNx" firstAttribute="leading" secondItem="EPw-gY-4LG" secondAttribute="trailing" constant="5" id="tCm-VR-SiC"/>
                             <constraint firstItem="EPw-gY-4LG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="84" id="tcm-VX-Zpk"/>
+                            <constraint firstItem="7a5-9C-Nyk" firstAttribute="leading" secondItem="CS1-AJ-gNe" secondAttribute="trailing" constant="8" symbolic="YES" id="usX-Jj-Vbi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yuO-Tv-PLk" secondAttribute="trailing" constant="28" id="vUE-rh-xch"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
